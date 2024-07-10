@@ -1,4 +1,5 @@
 // import React from 'react';
+// import {Fragment} from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
@@ -6,16 +7,32 @@ import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-  const reactElement = (
-    <div id="wrapper" className='foo'>
-      <ul>
-        <li className='list-item'>item 1</li>
-        <li className='list-item'>item 2</li>
-        <li className='list-item'>item 3</li>
-      </ul>
+// const items =["foo", "bar"];
+const items =["bar"];
 
-      <button id='button1'>i am a button</button>
-    </div>
+let childElement;
+if (items.length >1) {
+  childElement = <input type='number' name='number' />
+} else {
+  childElement = <input type='password' name='password' />
+}
+
+  const reactElement = (
+    <>
+      <div id="wrapper" className='foo'>
+        <ul>
+          {items.map(item => <li className='list-item'>{item}</li>)}
+          {/* <li className='list-item'>item 1</li>
+          <li className='list-item'>item 2</li>
+          <li className='list-item'>item 3</li> */}
+        </ul>
+        
+        {childElement}
+
+        <button id='button1'>i am a button</button>
+      </div>
+      <div>1213</div>
+    </>
   );
 
   root.render(reactElement)
