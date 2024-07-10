@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
@@ -6,18 +6,19 @@ import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
+  const reactElement = (
+    <div id="wrapper" className='foo'>
+      <ul>
+        <li className='list-item'>item 1</li>
+        <li className='list-item'>item 2</li>
+        <li className='list-item'>item 3</li>
+      </ul>
 
-setInterval(() => {
-
-  const reactElement = React.createElement(
-    'div',
-    null,
-    React.createElement('h1', null, 'hello world', 'aaa', 'bbb'),
-    React.createElement('h2', null, 'time is ', new Date().toLocaleTimeString()),
+      <button id='button1'>i am a button</button>
+    </div>
   );
 
   root.render(reactElement)
-}, 1000);
 
 
 
