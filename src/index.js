@@ -6,6 +6,7 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import MyComponent from "./MyComponent";
 import MyComponent2 from "./MyComponent2";
+import Counter from "./Counter";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -45,6 +46,10 @@ const reactElement = (
       {/* <button id='button1'>i am a button</button> */}
     </div>
     <div>1213</div>
+
+    <hr />
+
+    <Counter />
   </>
 );
 
