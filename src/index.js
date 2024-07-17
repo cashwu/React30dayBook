@@ -3,12 +3,15 @@
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import Counter from "./Counter";
+import Footer from "./components/Footer";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 const reactElement = (
   <>
     <Counter />
+
+    <Footer />
   </>
 );
 
